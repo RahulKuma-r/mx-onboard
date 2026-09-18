@@ -1,0 +1,19 @@
+{
+  "name": "mx-onboard",
+  "version": "0.1.0",
+  "description": "Makes a subsystem legible to a person, not to an agent. /explain writes an onboarding document whose pass condition is its surprises, not its coverage; /verify-doc takes an existing document and reports which of its claims are still true. Composes with repo-mapper for ownership questions.",
+  "author": {
+    "name": "Rahul Kumar"
+  },
+  "keywords": [
+    "onboarding",
+    "documentation",
+    "codebase-comprehension",
+    "human-legibility",
+    "doc-drift"
+  ],
+  "skills": [
+    "./skills/explain",
+    "./skills/verify-doc"
+  ]
+}

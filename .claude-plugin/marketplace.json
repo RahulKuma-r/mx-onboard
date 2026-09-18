@@ -1,0 +1,14 @@
+{
+  "name": "mx-onboard",
+  "description": "Human-legibility tooling: write onboarding documents that earn their keep, and check existing ones for claims that have gone stale.",
+  "owner": {
+    "name": "Rahul Kumar"
+  },
+  "plugins": [
+    {
+      "name": "mx-onboard",
+      "source": "./",
+      "description": "/explain writes a subsystem explanation for a person; /verify-doc reports which claims in an existing document are still true."
+    }
+  ]
+}

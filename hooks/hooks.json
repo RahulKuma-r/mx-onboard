@@ -1,0 +1,18 @@
+{
+  "description": "One hook. require_surprises.py blocks writing an onboarding document whose \"What will surprise you\" section is present but empty -- the /explain skill asks for it, this makes it hold. It fires only on markdown that already carries the heading, so ordinary writes are untouched.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/require_surprises.py"],
+            "statusMessage": "mx-onboard: checking the surprises section"
+          }
+        ]
+      }
+    ]
+  }
+}
