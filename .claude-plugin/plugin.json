@@ -1,7 +1,7 @@
 {
   "name": "mx-onboard",
-  "version": "0.1.0",
-  "description": "Makes a subsystem legible to a person, not to an agent. /explain writes an onboarding document whose pass condition is its surprises, not its coverage; /verify-doc takes an existing document and reports which of its claims are still true. Composes with repo-mapper for ownership questions.",
+  "version": "0.2.0",
+  "description": "Makes a subsystem legible to a person, not to an agent. /explain writes an onboarding document whose pass condition is its surprises, not its coverage; /verify-doc reports which of an existing document's claims are still true; and a drift hook says so at the moment an edit lands on a file a document describes, rather than months later when someone is misled by it.",
   "author": {
     "name": "Rahul Kumar"
   },

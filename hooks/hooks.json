@@ -1,5 +1,5 @@
 {
-  "description": "One hook. require_surprises.py blocks writing an onboarding document whose \"What will surprise you\" section is present but empty -- the /explain skill asks for it, this makes it hold. It fires only on markdown that already carries the heading, so ordinary writes are untouched.",
+  "description": "Two hooks, and the difference between them is the design. require_surprises.py BLOCKS an onboarding document whose \"What will surprise you\" section is empty -- that is definitely wrong and the author can fix it. doc_drift.py only NOTIFIES when an edit lands on a file a document describes -- that is a maybe, and blocking every edit to a documented file would train people to delete the documents. Both self-gate: a repository with no onboarding documents sees nothing.",
   "hooks": {
     "PostToolUse": [
       {
@@ -10,6 +10,12 @@
             "command": "python",
             "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/require_surprises.py"],
             "statusMessage": "mx-onboard: checking the surprises section"
+          },
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/doc_drift.py"],
+            "statusMessage": "mx-onboard: checking for documentation drift"
           }
         ]
       }
