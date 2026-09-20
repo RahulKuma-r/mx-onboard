@@ -46,8 +46,10 @@ of investigating.
    proves it. Several repos sit side by side; confirm before reading.
 2. **Read. Do not skim structure.** Glob the layout, then grep for the domain term, then read the
    files where the behaviour actually lives. Tests often explain intent better than source.
-3. **For any "who owns this data" question, use the `repo-mapper` agent.** It answers ownership
-   with `file:line` evidence and it cannot edit anything. Do not re-derive that by hand.
+3. **For any "who owns this data" question, dispatch the `tracer` agent.** It answers ownership
+   with `file:line` evidence, it cannot edit anything, and — the reason it is an agent — the
+   twenty files it reads stay in its context rather than filling yours. Do not re-derive
+   ownership by hand.
 4. **Write down the things that contradicted your expectations as you go.** They are the
    document. If you wait until the end you will have forgotten them.
 
@@ -83,6 +85,21 @@ position. This is the section people actually use.>
 ## What I could not determine
 <Open questions, and what would answer them. "Not in this repo" is a real finding.>
 ```
+
+## After the document is written, have it argued with
+
+Dispatch the `doc-reviewer` agent on the finished file.
+
+It sees the document and the repository and **not this conversation** — which is the point. A
+reviewer that watched you reason will agree with you, because every conclusion already looks
+earned. One that arrives cold can be surprised by the document, and being surprised is the job.
+
+It will attack the surprises section hardest: *would a competent reader have assumed otherwise?*
+A "surprise" anyone could find with one grep is a fact wearing the wrong label.
+
+Report what it found. Fix what it got right. If it says a surprise is weak and it is right,
+delete the surprise rather than defending it — a thin surprises section that is honest is worth
+more than a padded one.
 
 ## Rules
 

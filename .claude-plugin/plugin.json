@@ -1,7 +1,7 @@
 {
   "name": "mx-onboard",
-  "version": "0.2.0",
-  "description": "Makes a subsystem legible to a person, not to an agent. /explain writes an onboarding document whose pass condition is its surprises, not its coverage; /verify-doc reports which of an existing document's claims are still true; and a drift hook says so at the moment an edit lands on a file a document describes, rather than months later when someone is misled by it.",
+  "version": "0.3.0",
+  "description": "Makes a subsystem legible to a person, not to an agent. /explain writes an onboarding document whose pass condition is its surprises, then has a cold reviewer argue with it; /verify-doc reports which of one document's claims are still true; /survey audits every document in the repository in parallel and ranks them by what goes wrong if they are trusted; and a drift hook says so the moment an edit lands on a file a document describes.",
   "author": {
     "name": "Rahul Kumar"
   },
@@ -14,6 +14,7 @@
   ],
   "skills": [
     "./skills/explain",
-    "./skills/verify-doc"
+    "./skills/verify-doc",
+    "./skills/survey"
   ]
 }
